@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\Bryani.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Burger.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Coffee.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ColdDrink.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\HotWings.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\IceCream.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Nugget.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pasta.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pizza.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Samosa.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Shourama.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Tea.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Bryani.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Burger.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Coffee.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ColdDrink.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\HotWings.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\IceCream.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Nugget.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pasta.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pizza.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Samosa.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Shourama.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Tea.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

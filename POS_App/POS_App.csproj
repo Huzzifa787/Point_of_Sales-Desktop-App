@@ -1,0 +1,168 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="del.jpg" />
+    <None Remove="Views\1.jpg" />
+    <None Remove="Views\2.jpg" />
+    <None Remove="Views\3.jpg" />
+    <None Remove="Views\4.jpg" />
+    <None Remove="Views\5.jpg" />
+    <None Remove="Views\6.jpg" />
+    <None Remove="Views\B1.jpg" />
+    <None Remove="Views\B2.jpg" />
+    <None Remove="Views\B3.jpg" />
+    <None Remove="Views\B4.jpg" />
+    <None Remove="Views\B5.jpg" />
+    <None Remove="Views\B6.jpg" />
+    <None Remove="Views\burger.jpg" />
+    <None Remove="Views\burger2.jpg" />
+    <None Remove="Views\burger3.jpg" />
+    <None Remove="Views\burger4.jpg" />
+    <None Remove="Views\burger5.jpg" />
+    <None Remove="Views\burger6.jpg" />
+    <None Remove="Views\C2.jpg" />
+    <None Remove="Views\C3.jpg" />
+    <None Remove="Views\C4.jpg" />
+    <None Remove="Views\C5.jpg" />
+    <None Remove="Views\C6.jpg" />
+    <None Remove="Views\Cq.jpg" />
+    <None Remove="Views\D1.jpg" />
+    <None Remove="Views\D2.jpg" />
+    <None Remove="Views\D3.jpg" />
+    <None Remove="Views\D4.jpg" />
+    <None Remove="Views\D5.jpg" />
+    <None Remove="Views\D6.jpg" />
+    <None Remove="Views\I1.jpg" />
+    <None Remove="Views\I2.jpg" />
+    <None Remove="Views\I3.jpg" />
+    <None Remove="Views\I4.jpg" />
+    <None Remove="Views\I5.jpg" />
+    <None Remove="Views\I6.jpg" />
+    <None Remove="Views\N1.jpg" />
+    <None Remove="Views\N2.jpg" />
+    <None Remove="Views\N3.jpg" />
+    <None Remove="Views\N4.jpg" />
+    <None Remove="Views\N5.jpg" />
+    <None Remove="Views\N6.jpg" />
+    <None Remove="Views\P1.jpg" />
+    <None Remove="Views\P2.jpg" />
+    <None Remove="Views\P3.jpg" />
+    <None Remove="Views\P4.jpg" />
+    <None Remove="Views\P5.jpg" />
+    <None Remove="Views\P6.jpg" />
+    <None Remove="Views\PS1.jpg" />
+    <None Remove="Views\PS2.jpg" />
+    <None Remove="Views\PS3.jpg" />
+    <None Remove="Views\PS4.jpg" />
+    <None Remove="Views\PS5.jpg" />
+    <None Remove="Views\PS6.jpg" />
+    <None Remove="Views\S1.jpg" />
+    <None Remove="Views\S2.jpg" />
+    <None Remove="Views\S3.jpg" />
+    <None Remove="Views\S4.jpg" />
+    <None Remove="Views\S5.jpg" />
+    <None Remove="Views\S7.jpg" />
+    <None Remove="Views\T1.jpg" />
+    <None Remove="Views\T2.jpg" />
+    <None Remove="Views\T3.jpg" />
+    <None Remove="Views\T4.jpg" />
+    <None Remove="Views\T5.jpg" />
+    <None Remove="Views\T6.jpg" />
+    <None Remove="Views\W1.jpg" />
+    <None Remove="Views\W2.jpg" />
+    <None Remove="Views\W3.jpg" />
+    <None Remove="Views\W4.jpg" />
+    <None Remove="Views\W5.jpg" />
+    <None Remove="Views\W6.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="itext7" Version="8.0.2" />
+    <PackageReference Include="iTextSharp" Version="5.5.13.3" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="del.jpg" />
+    <Resource Include="Views\1.jpg" />
+    <Resource Include="Views\2.jpg" />
+    <Resource Include="Views\3.jpg" />
+    <Resource Include="Views\4.jpg" />
+    <Resource Include="Views\5.jpg" />
+    <Resource Include="Views\6.jpg" />
+    <Resource Include="Views\B1.jpg" />
+    <Resource Include="Views\B2.jpg" />
+    <Resource Include="Views\B3.jpg" />
+    <Resource Include="Views\B4.jpg" />
+    <Resource Include="Views\B5.jpg" />
+    <Resource Include="Views\B6.jpg" />
+    <Resource Include="Views\burger.jpg" />
+    <Resource Include="Views\burger2.jpg" />
+    <Resource Include="Views\burger3.jpg" />
+    <Resource Include="Views\burger4.jpg" />
+    <Resource Include="Views\burger5.jpg" />
+    <Resource Include="Views\burger6.jpg" />
+    <Resource Include="Views\C2.jpg" />
+    <Resource Include="Views\C3.jpg" />
+    <Resource Include="Views\C4.jpg" />
+    <Resource Include="Views\C5.jpg" />
+    <Resource Include="Views\C6.jpg" />
+    <Resource Include="Views\Cq.jpg" />
+    <Resource Include="Views\D1.jpg" />
+    <Resource Include="Views\D2.jpg" />
+    <Resource Include="Views\D3.jpg" />
+    <Resource Include="Views\D4.jpg" />
+    <Resource Include="Views\D5.jpg" />
+    <Resource Include="Views\D6.jpg" />
+    <Resource Include="Views\I1.jpg" />
+    <Resource Include="Views\I2.jpg" />
+    <Resource Include="Views\I3.jpg" />
+    <Resource Include="Views\I4.jpg" />
+    <Resource Include="Views\I5.jpg" />
+    <Resource Include="Views\I6.jpg" />
+    <Resource Include="Views\N1.jpg" />
+    <Resource Include="Views\N2.jpg" />
+    <Resource Include="Views\N3.jpg" />
+    <Resource Include="Views\N4.jpg" />
+    <Resource Include="Views\N5.jpg" />
+    <Resource Include="Views\N6.jpg" />
+    <Resource Include="Views\P1.jpg" />
+    <Resource Include="Views\P2.jpg" />
+    <Resource Include="Views\P3.jpg" />
+    <Resource Include="Views\P4.jpg" />
+    <Resource Include="Views\P5.jpg" />
+    <Resource Include="Views\P6.jpg" />
+    <Resource Include="Views\PS1.jpg" />
+    <Resource Include="Views\PS2.jpg" />
+    <Resource Include="Views\PS3.jpg" />
+    <Resource Include="Views\PS4.jpg" />
+    <Resource Include="Views\PS5.jpg" />
+    <Resource Include="Views\PS6.jpg" />
+    <Resource Include="Views\S1.jpg" />
+    <Resource Include="Views\S2.jpg" />
+    <Resource Include="Views\S3.jpg" />
+    <Resource Include="Views\S4.jpg" />
+    <Resource Include="Views\S5.jpg" />
+    <Resource Include="Views\S7.jpg" />
+    <Resource Include="Views\T1.jpg" />
+    <Resource Include="Views\T2.jpg" />
+    <Resource Include="Views\T3.jpg" />
+    <Resource Include="Views\T4.jpg" />
+    <Resource Include="Views\T5.jpg" />
+    <Resource Include="Views\T6.jpg" />
+    <Resource Include="Views\W1.jpg" />
+    <Resource Include="Views\W2.jpg" />
+    <Resource Include="Views\W3.jpg" />
+    <Resource Include="Views\W4.jpg" />
+    <Resource Include="Views\W5.jpg" />
+    <Resource Include="Views\W6.jpg" />
+  </ItemGroup>
+
+</Project>

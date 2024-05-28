@@ -1,0 +1,110 @@
+﻿<Window x:Class="POS_App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POS_App"
+        xmlns:loc="clr-namespace:POS_App.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="680" Width="1137">
+    <Grid ShowGridLines="False" Margin="0,0,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+
+        </Grid.RowDefinitions>
+        
+            <DataGrid Grid.Column="0" Grid.RowSpan="2" Name="ItemGrid" AutoGenerateColumns="False" CanUserAddRows="False" ItemsSource="{Binding}">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="Delete">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Click="Delete_click">
+                                    <Image Height="20" Width="20" Source="/del.jpg"></Image>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Binding="{Binding Name}" Header="Name"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Price}" Header="Price"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Quanity}" Header="Qty"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Total}" Header="Total"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Tax}" Header="Tax"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Comment}"  Header="Comment"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,80,0,46" Grid.RowSpan="2" HorizontalAlignment="Right">
+            <CheckBox Height="26" Checked="CheckBox_Checked" Margin="0,0,5,0"  >Salt</CheckBox>
+            <CheckBox Height="26" Checked="CheckBox_Checked" Margin="0,0,5,0">Milk</CheckBox>
+            <CheckBox Height="26" Checked="CheckBox_Checked" Margin="0,0,5,0">Sugar</CheckBox>
+            <CheckBox Height="26" Checked="CheckBox_Checked" Margin="0,0,5,0">Spicy</CheckBox>
+            <CheckBox Height="26" Checked="CheckBox_Checked" Margin="0,0,5,0">Tomato</CheckBox>
+            <CheckBox Height="26" Checked="CheckBox_Checked" Margin="0,0,5,0">Ice</CheckBox>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,20,-4,0" RenderTransformOrigin="0.481,0.812">
+            <Label FontSize="20" Content="Total" Foreground="#FFD81313" FontWeight="Bold"/>
+            <TextBlock x:Name="Total_Label" Text="{Binding Path=Total_Am,Mode=OneWay}" Margin="100,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,106,0,0" RenderTransformOrigin="0.481,0.812">
+            <Label FontSize="12" Content="Discount"/>
+            <TextBlock x:Name="Discount" Text="{Binding Path=Discount,Mode=OneWay}" Margin="100,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Label FontSize="12" Content="Sub Total" FontWeight="Bold"></Label>
+            <TextBlock x:Name="Sub_total" Text="{Binding Path=Sub_Total,Mode=OneWay}" Margin="95,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,26,0,0">
+            <Label FontSize="12" Content="Tax" FontWeight="Bold"></Label>
+
+            <TextBlock x:Name="tax" Text="{Binding Path=Tax,Mode=OneWay}" Margin="130,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        </StackPanel>
+        <TextBlock Grid.Row="3" Text="===============================================" HorizontalAlignment="Center" VerticalAlignment="Center" Height="22" Width="379" RenderTransformOrigin="0.495,-0.82"/>
+        <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,29">
+            <Label FontSize="15" Content="Total Payable" Foreground="#FFD81313" FontWeight="Bold" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock Name="Total_Pay" Text="{Binding Path=Total_Pay,Mode=OneWay}" Margin="55,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,110,0,0" Grid.RowSpan="2">
+
+
+            <Label FontSize="12" Content="Total Item Types"></Label>
+            <TextBlock x:Name="item_qty" Text="{Binding Path=Types,Mode=OneWay}" Margin="63,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        </StackPanel>
+        <Button Grid.Column="0" Grid.Row="4" Content="Payment" FontWeight="Bold" Foreground="Black" FontSize="20" Background="#FF56B757" Margin="38,42,54,49" Click="Payment_Click"/>
+
+        <ScrollViewer Grid.RowSpan="5" Grid.Column="1" HorizontalAlignment="Left" Width="266">
+            <StackPanel>
+                <Button Height="60" Background="#FFDED500" FontSize="20" FontWeight="Bold" Click="Burger_Click">Burger</Button>
+                <Button Height="60" Background="#FFDED500" FontSize="20" FontWeight="Bold" Click="Shourama_Click">Shourama</Button>
+                <Button Height="60" Background="#FFDED500" FontSize="20" FontWeight="Bold" Click="Pizza_Click">Pizza</Button>
+                <Button Height="60" Background="#FFDED500" FontSize="20" FontWeight="Bold" Click="HotWings_Click">Hot Wings</Button>
+                <Button Height="60" Background="#FFDED500" FontSize="20" FontWeight="Bold" Click="Nuggets_Click">Nuggets</Button>
+                <Button Height="60" Background="#FFDED500" FontSize="20" FontWeight="Bold" Click="Pasta_Click">Pasta</Button>
+                <Button Height="60" Background="#FFDED500" FontSize="20" FontWeight="Bold" Click="Samosa_Click">Samosa's</Button>
+                <Button Height="60" Background="#FFDED500" FontSize="20" FontWeight="Bold" Click="Bryani_Click">Briyani</Button>
+                <Button Height="60" Background="#FFDED500" FontSize="20" FontWeight="Bold" Click="Drink_Click">Cold Drink</Button>
+                <Button Height="60" Background="#FFDED500" FontSize="20" FontWeight="Bold" Click="IceCream_Click">Ice Cream</Button>
+                <Button Height="60" Background="#FFDED500" FontSize="20" FontWeight="Bold" Click="Coffee_Click">Coffee</Button>
+                <Button Height="60" Background="#FFDED500" FontSize="20" FontWeight="Bold" Click="Tea_Click">Tea</Button>
+                
+
+            </StackPanel>
+        </ScrollViewer>
+        
+            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.Column="1" Grid.RowSpan="5" Grid.ColumnSpan="2" Margin="266,0,0,10" />
+      
+        
+    </Grid>
+
+</Window>
